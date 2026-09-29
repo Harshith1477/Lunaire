@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAF8;
+  overflow-x: hidden;
+}
+
+/* Smooth image loading - fade in when loaded */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Video elements get a dark background while loading */
+video {
+  background-color: #1a1a1a;
+}
+
+/* Force GPU acceleration on animated elements for smoother performance */
+.lunaire-arrivals-track,
+[style*="clipPath"],
+.pin-spacer {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Smoother scrollbar on product tracks */
+::-webkit-scrollbar {
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 16, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 17, 16, 0.3);
+}
